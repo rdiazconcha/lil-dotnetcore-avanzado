@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "curso";
+
+
+service ProductsService {
+    rpc GetProductById(ProductRequest) returns (Product);
+}
+
+
+message ProductRequest {
+    int32 id = 1;
+}
+
+message Product {
+    int32 id = 1;
+    string name = 2;
+    double price = 3;
+    Category Category = 4;
+    bool isAvailable = 5;
+}
+
+enum Category {
+    Food = 0;
+    Technology = 1;
+}

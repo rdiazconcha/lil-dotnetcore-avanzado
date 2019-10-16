@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>netcoreapp3.0</TargetFramework>
+       <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+       <PublishReadyToRun>true</PublishReadyToRun>
+       <PublishSingleFile>true</PublishSingleFile>
+       <PublishTrimmed>true</PublishTrimmed>
+   </PropertyGroup>
+
+   <ItemGroup>
+      <PackageReference Include="Humanizer" Version="2.7.9" />
+   </ItemGroup>
+
+   <Choose>
+       <When Condition=" '$(Configuration)'=='Debug'">
+          <PropertyGroup>
+               <OutputPath>.\version\Depuracion\</OutputPath>
+	  </PropertyGroup>
+       </When>
+
+       <When Condition=" '$(Configuration)'=='Release'">
+          <PropertyGroup>
+               <OutputPath>.\version\Liberacion\</OutputPath>
+	  </PropertyGroup>
+       </When>
+   </Choose>
+
+</Project>

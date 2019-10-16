@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>dotnet_waffle</RootNamespace>
+    <Authors>Rodrigo Díaz Concha</Authors>
+    <Description>Waffle tool for .NET CLI</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageOutputPath>./nuget</PackageOutputPath>
+    <PackAsTool>true</PackAsTool>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WaffleGenerator" Version="4.0.2" />
+  </ItemGroup>
+
+</Project>
